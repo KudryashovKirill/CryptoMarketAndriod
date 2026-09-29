@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.cryptomarket.fragments.StartFragment"
+        android:label="StartFragment" >
+        <action
+            android:id="@+id/action_start_to_registration"
+            app:destination="@id/registrationFragment" />
+        <action
+            android:id="@+id/action_start_to_content"
+            app:destination="@id/contentFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.example.cryptomarket.fragments.RegistrationFragment"
+        android:label="RegistrationFragment" >
+        <!-- Возврат на стартовый экран с очисткой стека -->
+        <action
+            android:id="@+id/action_registration_to_start"
+            app:destination="@id/startFragment"
+            app:popUpTo="@id/startFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/contentFragment"
+        android:name="com.example.cryptomarket.fragments.ContentFragment"
+        android:label="ContentFragment" >
+        <action
+            android:id="@+id/action_content_to_settings"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.cryptomarket.fragments.SettingsFragment"
+        android:label="SettingsFragment" />
+</navigation>
