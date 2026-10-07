@@ -1,14 +1,10 @@
-package com.example.cryptomarket.ui
+package com.example.cryptomarket.my.ui
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import androidx.activity.result.contract.ActivityResultContracts
 import com.example.cryptomarket.databinding.ActivityStartBinding
 import com.example.cryptomarket.my.model.Account
-import com.example.cryptomarket.my.ui.BaseActivity
-import com.example.cryptomarket.my.ui.ContentActivity
-import com.example.cryptomarket.my.ui.RegistrationActivity
 
 class StartActivity : BaseActivity() {
 
